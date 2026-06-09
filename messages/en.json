@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "title": "SifrMind - Zero Noise. Clear Mind.",
+    "description": "At SifrMind, we turn complexity into clarity. We craft high-performance software solutions designed to help businesses scale faster, operate smarter, and think clearer — with zero noise."
+  },
+  "general": {
+    "appName": "SifrMind"
+  },
+  "navbar": {
+    "title": "Mind",
+    "theme": {
+      "title": "Appearance",
+      "themes": [
+        { "key": "light", "title": "Light" },
+        { "key": "dark", "title": "Dark" },
+        { "key": "cupcake", "title": "Cupcake" },
+        { "key": "bumblebee", "title": "Bumblebee" },
+        { "key": "emerald", "title": "Emerald" },
+        { "key": "corporate", "title": "Corporate" },
+        { "key": "synthwave", "title": "Synthwave" },
+        { "key": "retro", "title": "Retro" },
+        { "key": "cyberpunk", "title": "Cyberpunk" },
+        { "key": "valentine", "title": "Valentine" },
+        { "key": "halloween", "title": "Halloween" },
+        { "key": "garden", "title": "Garden" },
+        { "key": "forest", "title": "Forest" },
+        { "key": "aqua", "title": "Aqua" },
+        { "key": "lofi", "title": "Lo-Fi" },
+        { "key": "pastel", "title": "Pastel" },
+        { "key": "fantasy", "title": "Fantasy" },
+        { "key": "wireframe", "title": "Wireframe" },
+        { "key": "black", "title": "Black" },
+        { "key": "luxury", "title": "Luxury" },
+        { "key": "dracula", "title": "Dracula" },
+        { "key": "cmyk", "title": "CMYK" },
+        { "key": "autumn", "title": "Autumn" },
+        { "key": "business", "title": "Business" },
+        { "key": "acid", "title": "Acid" },
+        { "key": "lemonade", "title": "Lemonade" },
+        { "key": "night", "title": "Night" },
+        { "key": "coffee", "title": "Coffee" },
+        { "key": "winter", "title": "Winter" },
+        { "key": "dim", "title": "Dim" },
+        { "key": "nord", "title": "Nord" },
+        { "key": "sunset", "title": "Sunset" },
+        { "key": "caramellatte", "title": "Caramel Latte" },
+        { "key": "abyss", "title": "Abyss" },
+        { "key": "silk", "title": "Silk" }
+      ]
+    },
+    "language": "Language",
+    "account": {
+      "title": "My Account",
+      "menuItems": [
+        { "title": "Sign In", "url": "/login?sign=in" },
+        { "title": "Get Started", "url": "/login?sign=up" }
+      ]
+    }
+  },
+  "Home": {
+    "heroText1": "The Future of Technology in Egypt",
+    "heroText2": "Starts Here.",
+    "soon": "Coming Soon"
+  }
+}

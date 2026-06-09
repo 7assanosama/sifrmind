@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "title": "صفر مايند - بدون ضوضاء. ذهن صافي.",
+    "description": "في صفر مايند، نحول التعقيد إلى وضوح. نطوّر حلول برمجية عالية الأداء مصممة لمساعدة الشركات على النمو بشكل أسرع، والعمل بذكاء أكبر، والتفكير بوضوح — بدون أي ضوضاء."
+  },
+  "general": {
+    "appName": "صفر مايند"
+  },
+  "navbar": {
+    "title": "مايند",
+    "theme": {
+      "title": "اختر لونك المفضل",
+      "themes": [
+        { "key": "light", "title": "نهاري" },
+        { "key": "dark", "title": "ليلي" },
+        { "key": "cupcake", "title": "كاب كيك" },
+        { "key": "bumblebee", "title": "نحلة" },
+        { "key": "emerald", "title": "زمردي" },
+        { "key": "corporate", "title": "رسمي" },
+        { "key": "synthwave", "title": "صاخب" },
+        { "key": "retro", "title": "كلاسيكي" },
+        { "key": "cyberpunk", "title": "سايبر بانك" },
+        { "key": "valentine", "title": "رومانسي" },
+        { "key": "halloween", "title": "هالوين" },
+        { "key": "garden", "title": "حديقة" },
+        { "key": "forest", "title": "غابة" },
+        { "key": "aqua", "title": "مائي" },
+        { "key": "lofi", "title": "هادئ" },
+        { "key": "pastel", "title": "باستيل" },
+        { "key": "fantasy", "title": "خيالي" },
+        { "key": "wireframe", "title": "مخطط" },
+        { "key": "black", "title": "أسود" },
+        { "key": "luxury", "title": "فخم" },
+        { "key": "dracula", "title": "دراكولا" },
+        { "key": "cmyk", "title": "ملون" },
+        { "key": "autumn", "title": "خريفي" },
+        { "key": "business", "title": "أعمال" },
+        { "key": "acid", "title": "أسيد" },
+        { "key": "lemonade", "title": "ليموناضة" },
+        { "key": "night", "title": "معتم" },
+        { "key": "coffee", "title": "قهوة" },
+        { "key": "winter", "title": "شتوي" },
+        { "key": "dim", "title": "خافت" },
+        { "key": "nord", "title": "نورد" },
+        { "key": "sunset", "title": "غروب" },
+        { "key": "caramellatte", "title": "كاراميل لاتيه" },
+        { "key": "abyss", "title": "الأعماق" },
+        { "key": "silk", "title": "حرير" }
+      ]
+    },
+    "language": "اللغة",
+    "account": {
+      "title": "حسابي",
+      "menuItems": [
+        { "title": "تسجيل الدخول", "url": "/login?sign=in" },
+        { "title": "انضم إلينا", "url": "/login?sign=up" }
+      ]
+    }
+  },
+  "Home": {
+    "heroText1": "مستقبل التكنولوجيا في مصر",
+    "heroText2": "هيبدأ من هنا.",
+    "soon": "قريباً"
+  }
+}
