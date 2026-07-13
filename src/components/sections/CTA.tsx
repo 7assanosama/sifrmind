@@ -1,12 +1,13 @@
 "use client";
 
-import Link from "next/link";
 import Section from "@/components/ui/Section";
 import Container from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import { SmartLink } from "@/components/SmartLink";
 
 interface CTAProps {
+  locale: string;
   messages: {
     brand: {
       name: string;
@@ -20,7 +21,7 @@ interface CTAProps {
   };
 }
 
-export default function CTA({ messages }: CTAProps) {
+export default function CTA({ messages, locale }: CTAProps) {
   return (
     <Section id="contact" className="overflow-hidden pb-0">
       <Container>
@@ -53,9 +54,7 @@ export default function CTA({ messages }: CTAProps) {
             {/* Headline — Part 1 gradient, Part 2 primary */}
             <ScrollReveal delay={0.15}>
               <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold leading-tight max-w-3xl mx-auto text-text-primary">
-                <span className="gradient-text">
-                  {messages.headlinePart1}
-                </span>{" "}
+                <span className="gradient-text">{messages.headlinePart1}</span>{" "}
                 {messages.headlinePart2}
               </h2>
             </ScrollReveal>
@@ -70,16 +69,16 @@ export default function CTA({ messages }: CTAProps) {
             {/* Actions */}
             <ScrollReveal delay={0.45}>
               <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link href="#products">
+                <SmartLink href="#products">
                   <Button variant="primary" size="lg">
                     {messages.cta1}
                   </Button>
-                </Link>
-                <Link href="mailto:hello@sifrmind.com">
+                </SmartLink>
+                <SmartLink href="/contact">
                   <Button variant="secondary" size="lg">
                     {messages.cta2}
                   </Button>
-                </Link>
+                </SmartLink>
               </div>
             </ScrollReveal>
           </div>

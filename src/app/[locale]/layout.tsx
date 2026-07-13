@@ -4,6 +4,7 @@ import { getMessages, getTranslations } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { Cairo, IBM_Plex_Sans_Arabic } from "next/font/google";
 import { Providers } from "../providers";
+import { HashScrollHandler } from "@/components/HashScrollHandler";
 import "../globals.css";
 
 const cairo = Cairo({
@@ -58,6 +59,7 @@ export default async function RootLayout({
           <Providers>
             <Navbar locale={locale} />
             {children}
+            <HashScrollHandler />
           </Providers>
         </NextIntlClientProvider>
       </body>

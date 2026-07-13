@@ -1,10 +1,17 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import {
+  motion,
+  LayoutGroup,
+  useScroll,
+  useMotionValueEvent,
+} from "framer-motion";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import MobileMenu from "@/components/ui/MobileMenu";
+import { SmartLink } from "@/components/SmartLink";
 
 interface NavLink {
   label: string;
@@ -34,6 +41,7 @@ export default function NavbarClient({
   ariaCloseMenu,
   languageSwitcher,
 }: NavbarClientProps) {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -70,7 +78,7 @@ export default function NavbarClient({
   useEffect(() => {
     const cleanup = handleSectionObserve();
     return cleanup;
-  }, [handleSectionObserve]);
+  }, [handleSectionObserve, pathname]);
 
   return (
     <>
@@ -125,13 +133,14 @@ export default function NavbarClient({
           </div>
 
           {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-1">
-            {links.map((link) => {
-              const sectionId = link.href.replace("#", "");
-              const isActive = activeSection === sectionId;
+          <LayoutGroup id="nav-links">
+            <div className="hidden md:flex items-center gap-1">
+              {links.map((link) => {
+                const sectionId = link.href.replace("#", "");
+                const isActive = activeSection === sectionId;
 
               return (
-                <Link
+                <SmartLink
                   key={link.href}
                   href={link.href}
                   className={cn(
@@ -153,10 +162,11 @@ export default function NavbarClient({
                       }}
                     />
                   )}
-                </Link>
-              );
-            })}
-          </div>
+                </SmartLink>
+                );
+              })}
+            </div>
+          </LayoutGroup>
 
           {/* Desktop right */}
           <div className="hidden md:flex items-center gap-2">

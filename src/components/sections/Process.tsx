@@ -55,7 +55,7 @@ export default function Process({ messages }: ProcessProps) {
           </p>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto px-4">
           {messages.steps.map((step, index) => {
             const Icon =
               step.id in journeyIcons

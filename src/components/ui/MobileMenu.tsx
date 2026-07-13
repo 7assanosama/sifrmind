@@ -2,9 +2,9 @@
 
 import { useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button } from "./Button";
+import { SmartLink } from "@/components/SmartLink";
 
 interface NavLink {
   label: string;
@@ -95,7 +95,7 @@ export default function MobileMenu({
               {/* Links */}
               <nav className="flex flex-col gap-1" role="menu">
                 {links.map((link) => (
-                  <Link
+                  <SmartLink
                     key={link.href}
                     href={link.href}
                     onClick={onClose}
@@ -105,7 +105,7 @@ export default function MobileMenu({
                     role="menuitem"
                   >
                     {link.label}
-                  </Link>
+                  </SmartLink>
                 ))}
               </nav>
 

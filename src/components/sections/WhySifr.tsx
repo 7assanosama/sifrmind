@@ -61,16 +61,12 @@ export default function WhySifr({ messages }: WhySifrProps) {
         </div>
 
         <ScrollReveal className="max-w-2xl mx-auto mb-20 md:mb-28">
-          <div className="flex items-center gap-6">
-            <div className="h-px flex-1 bg-border" />
-            <p className="text-xl md:text-2xl font-medium text-text-primary italic leading-relaxed text-center shrink-0">
+          <p className="text-xl md:text-2xl font-medium text-text-primary leading-relaxed text-center shrink-0">
               {messages.principle}
             </p>
-            <div className="h-px flex-1 bg-border" />
-          </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 max-w-5xl mx-auto mb-20 md:mb-28">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 max-w-5xl mx-auto mb-20 md:mb-28 px-4">
           {messages.pillars.map((pillar, i) => (
             <ScrollReveal key={pillar.title} delay={i * 0.1}>
               <div className="text-center border-t border-border pt-8">

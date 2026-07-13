@@ -131,7 +131,7 @@ export default function HomeClient({ messages, locale }: HomeClientProps) {
         <Features messages={messages.features} />
         <Process messages={messages.process} />
         <FAQ messages={messages.faq} />
-        <CTA messages={messages.cta} />
+        <CTA messages={messages.cta} locale={locale} />
       </main>
       <Footer messages={messages.footer} />
     </>

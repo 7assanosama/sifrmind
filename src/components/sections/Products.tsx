@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import type { ReactNode } from "react";
 import Section from "@/components/ui/Section";
 import Container from "@/components/ui/Container";
@@ -8,6 +7,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import GlassCard from "@/components/ui/GlassCard";
 import Badge from "@/components/ui/Badge";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import { SmartLink } from "@/components/SmartLink";
 import {
   DashboardIcon,
   SparklesIcon,
@@ -82,12 +82,23 @@ function ProductCard({
         </div>
 
         <div className="mt-8 pt-4 border-t border-border">
-          <Link
-            href={featured ? "https://www.dash.sifrmind.com/"+locale : "#philosophy"}
-            className="inline-flex items-center text-sm font-medium text-text-muted hover:text-brand transition-colors duration-200"
-          >
-            {product.cta}
-          </Link>
+          {featured ? (
+            <a
+              href={"https://www.dash.sifrmind.com/" + locale}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-sm font-medium text-text-muted hover:text-brand transition-colors duration-200"
+            >
+              {product.cta}
+            </a>
+          ) : (
+            <SmartLink
+              href="#philosophy"
+              className="inline-flex items-center text-sm font-medium text-text-muted hover:text-brand transition-colors duration-200"
+            >
+              {product.cta}
+            </SmartLink>
+          )}
         </div>
       </GlassCard>
     </ScrollReveal>
@@ -122,7 +133,7 @@ export default function Products({ messages, locale }: ProductsProps) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto px-4">
           <ProductCard
             product={messages.dash}
             icon={<DashboardIcon className="w-5 h-5 text-brand/60" />}

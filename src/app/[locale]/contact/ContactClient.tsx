@@ -135,7 +135,7 @@ export default function ContactClient({ messages }: ContactClientProps) {
       {/* ═══════════════════ CONTACT CARDS ═══════════════════ */}
       <section className="pb-16 md:pb-24">
         <Container>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 px-4">
             {contactCards.map((card, i) => (
               <FadeUp key={card.title} delay={i * 0.06}>
                 <motion.div
@@ -192,7 +192,7 @@ export default function ContactClient({ messages }: ContactClientProps) {
       {/* ═══════════════════ QUICK INFO ═══════════════════ */}
       <section className="pb-16 md:pb-24">
         <Container>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-4xl mx-auto px-4">
             {quickInfoCards.map((card, i) => (
               <FadeUp key={card.title} delay={0.1 + i * 0.06}>
                 <div className="flex flex-col items-center text-center gap-3 p-7 rounded-3xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-xl">
@@ -213,7 +213,7 @@ export default function ContactClient({ messages }: ContactClientProps) {
       </section>
 
       {/* ═══════════════════ BOTTOM CTA ═══════════════════ */}
-      <section className="pb-20 md:pb-32">
+      <section className="pb-20 md:pb-32 px-4">
         <Container>
           <FadeUp>
             <div className="relative text-center py-16 md:py-20 rounded-3xl overflow-hidden bg-white/[0.02] border border-white/[0.08] backdrop-blur-xl">

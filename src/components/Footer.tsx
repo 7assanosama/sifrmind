@@ -3,6 +3,7 @@
 import Container from "@/components/ui/Container";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import Logo from "@/components/Logo";
+import { SmartLink } from "@/components/SmartLink";
 
 interface FooterLink {
   label: string;
@@ -105,7 +106,7 @@ export default function Footer({ messages }: FooterProps) {
       <Container>
         <div className="pt-20 pb-16">
           <ScrollReveal>
-            <div className="grid grid-cols-1 md:grid-cols-[42fr_19fr_19fr_20fr] gap-8 md:gap-6 items-start ltr">
+            <div className="grid grid-cols-1 md:grid-cols-[42fr_19fr_19fr_20fr] gap-8 md:gap-6 items-start ltr px-4">
               {/* Left — Brand story + Social */}
               <div className="flex flex-col rtl">
                 <div className="flex items-center gap-3">
@@ -149,12 +150,12 @@ export default function Footer({ messages }: FooterProps) {
                 <ul className="space-y-3">
                   {product.links.map((link) => (
                     <li key={link.label}>
-                      <a
+                      <SmartLink
                         href={link.href}
                         className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-300 inline-block hover-underline"
                       >
                         {link.label}
-                      </a>
+                      </SmartLink>
                     </li>
                   ))}
                 </ul>
@@ -168,12 +169,12 @@ export default function Footer({ messages }: FooterProps) {
                 <ul className="space-y-3">
                   {company.links.map((link) => (
                     <li key={link.label}>
-                      <a
+                      <SmartLink
                         href={link.href}
                         className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-300 inline-block hover-underline"
                       >
                         {link.label}
-                      </a>
+                      </SmartLink>
                     </li>
                   ))}
                 </ul>
@@ -187,12 +188,12 @@ export default function Footer({ messages }: FooterProps) {
                 <ul className="space-y-3">
                   {legal.links.map((link) => (
                     <li key={link.label}>
-                      <a
+                      <SmartLink
                         href={link.href}
                         className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-300 inline-block hover-underline"
                       >
                         {link.label}
-                      </a>
+                      </SmartLink>
                     </li>
                   ))}
                 </ul>

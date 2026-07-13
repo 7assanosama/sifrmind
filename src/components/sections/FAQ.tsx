@@ -64,7 +64,7 @@ export default function FAQ({ messages }: FAQProps) {
                       aria-expanded={isOpen}
                       aria-controls={answerId}
                       onClick={() => toggle(index)}
-                      className="flex items-center justify-between w-full text-left group"
+                      className="flex items-center justify-between w-full text-start group"
                     >
                       <span
                         className={cn(

@@ -8,9 +8,9 @@ import {
   useTransform,
   useReducedMotion,
 } from "framer-motion";
-import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import InteractiveSifrBackground from "@/components/InteractiveSifrBackground";
+import { SmartLink } from "@/components/SmartLink";
 
 interface HeroProps {
   locale: string;
@@ -126,16 +126,20 @@ export default function Hero({ messages, locale }: HeroProps) {
           transition={{ duration: 1, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <Link href={"https://www.dash.sifrmind.com/" + locale}>
+          <a
+            href={"https://www.dash.sifrmind.com/" + locale}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button variant="primary" size="lg">
               {messages.cta1}
             </Button>
-          </Link>
-          <Link href={locale + "/contact"}>
+          </a>
+          <SmartLink href="/contact">
             <Button variant="ghost" size="lg">
               {messages.cta2}
             </Button>
-          </Link>
+          </SmartLink>
         </motion.div>
       </motion.div>
 
