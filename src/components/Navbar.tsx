@@ -27,6 +27,7 @@ export default async function Navbar({ locale }: { locale: string }) {
         <NavbarActions
           label={locale === "ar" ? "EN" : "عربي"}
           ariaLabel={locale === "ar" ? a11y("switchToEnglish") : a11y("switchToArabic")}
+          targetLocale={locale === "ar" ? "en" : "ar"}
         />
       }
     />

@@ -7,8 +7,7 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { usePathname, Link } from "@/navigation";
 import { cn } from "@/lib/utils";
 import MobileMenu from "@/components/ui/MobileMenu";
 import { SmartLink } from "@/components/SmartLink";
@@ -46,6 +45,8 @@ export default function NavbarClient({
   const [activeSection, setActiveSection] = useState<string>("");
   const [mobileOpen, setMobileOpen] = useState(false);
   const { scrollY } = useScroll();
+
+  console.log(`[NavbarClient] usePathname()=${pathname}`);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScrolled(latest > 50);

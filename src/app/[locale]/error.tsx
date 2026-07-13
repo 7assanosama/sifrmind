@@ -35,7 +35,7 @@ export default function Error({ error, reset }: ErrorProps) {
             <Button
               variant="secondary"
               size="lg"
-              onClick={() => (window.location.href = "/")}
+              onClick={() => window.location.assign("/")}
             >
               Go home
             </Button>

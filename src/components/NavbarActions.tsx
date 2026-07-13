@@ -1,23 +1,19 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter } from "@/navigation";
 
 interface NavbarActionsProps {
   label: string;
   ariaLabel: string;
+  targetLocale: string;
 }
 
-export default function NavbarActions({ label, ariaLabel }: NavbarActionsProps) {
+export default function NavbarActions({ label, ariaLabel, targetLocale }: NavbarActionsProps) {
   const pathname = usePathname();
   const router = useRouter();
 
-  const currentLocale = pathname.split("/")[1] || "ar";
-  const targetLocale = currentLocale === "ar" ? "en" : "ar";
-
   const toggleLanguage = () => {
-    const segments = pathname.split("/");
-    segments[1] = targetLocale;
-    router.push(segments.join("/"));
+    router.push(pathname, { locale: targetLocale });
   };
 
   return (

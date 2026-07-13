@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { usePathname } from "@/navigation";
+import { consumePendingHash } from "@/lib/hash-navigation";
 
 export function HashScrollHandler() {
   const pathname = usePathname();
@@ -14,14 +15,17 @@ export function HashScrollHandler() {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const hash = window.location.hash;
+    const urlHash = window.location.hash.slice(1);
+    const pending = consumePendingHash();
+    const hash = urlHash || pending;
     if (!hash) return;
 
-    const id = hash.slice(1);
-
     const scrollToElement = () => {
-      const el = document.getElementById(id);
+      const el = document.getElementById(hash);
       if (el) {
+        if (pending && !urlHash) {
+          window.history.replaceState(null, "", `#${hash}`);
+        }
         el.scrollIntoView({ behavior: "smooth" });
         handledRef.current = true;
         return true;

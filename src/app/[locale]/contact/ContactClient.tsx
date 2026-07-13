@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef } from "react";
-import Link from "next/link";
 import type { ComponentType } from "react";
 import {
   Mail,
@@ -166,7 +165,7 @@ export default function ContactClient({ messages }: ContactClientProps) {
                       {card.value}
                     </p>
                   )}
-                  <Link href={card.href} target="_blank" rel="noopener noreferrer">
+                  <a href={card.href} target="_blank" rel="noopener noreferrer">
                     <span
                       className={cn(
                         "inline-flex items-center justify-center gap-2 w-full h-11 px-5",
@@ -174,14 +173,14 @@ export default function ContactClient({ messages }: ContactClientProps) {
                         "bg-brand text-background",
                         "hover:bg-brand-hover",
                         "shadow-[0_2px_12px_rgba(255,255,255,0.06)]",
-                        "hover:shadow-[0_4px_20px_rgba(255,255,255,0.08)]",
+                        "hover:shadow-[0_4px_20px rgba(255,255,255,0.08)]",
                         "transition-all duration-300",
                       )}
                     >
                       {card.cta}
                       <ArrowRight size={14} strokeWidth={2} />
                     </span>
-                  </Link>
+                  </a>
                 </motion.div>
               </FadeUp>
             ))}
@@ -225,18 +224,18 @@ export default function ContactClient({ messages }: ContactClientProps) {
                 {bottomCta.description}
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-                <Link href="mailto:support@sifrmind.com">
+                <a href="mailto:support@sifrmind.com">
                   <Button variant="primary" size="lg">
                     <Mail size={16} strokeWidth={1.75} />
                     {bottomCta.primaryCta}
                   </Button>
-                </Link>
-                <Link href="https://wa.me/201029231051" target="_blank" rel="noopener noreferrer">
+                </a>
+                <a href="https://wa.me/201029231051" target="_blank" rel="noopener noreferrer">
                   <Button variant="secondary" size="lg">
                     <MessageCircle size={16} strokeWidth={1.75} />
                     {bottomCta.secondaryCta}
                   </Button>
-                </Link>
+                </a>
               </div>
             </div>
           </FadeUp>

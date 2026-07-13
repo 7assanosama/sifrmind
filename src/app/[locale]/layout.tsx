@@ -55,7 +55,7 @@ export default async function RootLayout({
           {a11y("skipToContent")}
         </a>
 
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>
             <Navbar locale={locale} />
             {children}
