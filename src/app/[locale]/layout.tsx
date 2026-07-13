@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { cookies } from "next/headers";
 import Navbar from "@/components/Navbar";
-import { getMessages } from "next-intl/server";
-import { NextIntlClientProvider } from "next-intl"; 
+import { getMessages, getTranslations } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
 import { Cairo, IBM_Plex_Sans_Arabic } from "next/font/google";
 import { Providers } from "../providers";
 import "../globals.css";
@@ -20,8 +19,6 @@ const ibmPlexArabic = IBM_Plex_Sans_Arabic({
 });
 
 export const metadata: Metadata = {
-  title: "Dash - Premium Dashboard",
-  description: "High-performance dashboard template built with Next.js 16",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
@@ -38,9 +35,7 @@ export default async function RootLayout({
 }) {
   const { locale } = await params;
   const messages = await getMessages({ locale });
-
-  const cookieStore = cookies();
-  const theme = (await cookieStore).get("theme")?.value || "light";
+  const a11y = await getTranslations({ locale, namespace: "accessibility" });
 
   const direction = locale === "ar" ? "rtl" : "ltr";
 
@@ -48,13 +43,22 @@ export default async function RootLayout({
     <html
       lang={locale}
       dir={direction}
-      data-theme={theme}
       className={`${cairo.variable} ${ibmPlexArabic.variable} ${cairo.className} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-background text-text-primary">
+        {/* Skip to content */}
+        <a
+          href="#hero"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[9999] focus:bg-brand focus:text-white focus:px-4 focus:py-2 focus:rounded-radius-sm focus:text-sm focus:font-medium focus:outline-none"
+        >
+          {a11y("skipToContent")}
+        </a>
+
         <NextIntlClientProvider messages={messages}>
-          <Navbar locale={locale} />
-          <Providers>{children}</Providers>
+          <Providers>
+            <Navbar locale={locale} />
+            {children}
+          </Providers>
         </NextIntlClientProvider>
       </body>
     </html>

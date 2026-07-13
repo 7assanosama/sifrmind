@@ -1,5 +1,11 @@
 "use client";
 
-export function Providers({ children }: { children: React.ReactNode }) {
+import { type ReactNode } from "react";
+
+interface ProvidersProps {
+  children: ReactNode;
+}
+
+export function Providers({ children }: ProvidersProps) {
   return <>{children}</>;
 }

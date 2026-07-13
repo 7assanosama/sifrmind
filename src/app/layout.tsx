@@ -1,7 +1,9 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: ReactNode }>) {
+interface RootLayoutProps {
+  children: ReactNode;
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return <>{children}</>;
 }

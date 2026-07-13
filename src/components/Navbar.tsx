@@ -1,42 +1,34 @@
-import Link from "next/link";
-import Image from "next/image";
 import { getT } from "@/lib/i18n";
+import NavbarClient from "./NavbarClient";
 import NavbarActions from "./NavbarActions";
 
 export default async function Navbar({ locale }: { locale: string }) {
   const t = await getT(locale, "navbar");
+  const a11y = await getT(locale, "accessibility");
 
-  const messages = {
-    title: t("title"),
-    theme: t.raw("theme"),
-    account: t.raw("account"),
-  };
+  const links = [
+    { label: t.raw("links")[1], href: "#products" },
+    { label: t.raw("links")[0], href: "#why-sifr" },
+    { label: t.raw("links")[2], href: "#process" },
+    { label: t.raw("links")[3], href: "/contact" },
+  ];
 
   return (
-    <div className="fixed top-4 left-0 right-0 mx-auto z-[999] w-[90%] max-w-[1440px]">
-      <div className="absolute inset-0 rounded-2xl bg-black/10 backdrop-blur-xs border border-white/10 -z-10 pointer-events-none"></div>
-      <div className="h-[54px] flex items-center justify-between px-4">
-        {/* Left */}
-        <Link className="flex items-center gap-0 transition hover:opacity-80" href={"/"}>
-          <Image
-            src="/icon.svg"
-            alt="logo"
-            width={46}
-            height={46}
-            priority
-          />
-          <p className="text-2xl text-[#0060F5] font-extrabold">
-            {t("title")}
-          </p>
-        </Link>
-
-        {/* Right */}
+    <NavbarClient
+      links={links}
+      mobileCtaLabel={t("cta")}
+      brandFirst={locale === "ar" ? "صفر " : "Sifr "}
+      brandSecond={locale === "ar" ? "مايند" : "Mind"}
+      homeAriaLabel={locale === "ar" ? "صفر مايند — الرئيسية" : "Sifr Mind — Home"}
+      ariaMainNav={a11y("mainNavigation")}
+      ariaOpenMenu={a11y("openMenu")}
+      ariaCloseMenu={a11y("closeMenu")}
+      languageSwitcher={
         <NavbarActions
-          themeMessages={messages.theme}
-          languageTitle={t("language")}
-          accountMessages={messages.account}
+          label={locale === "ar" ? "EN" : "عربي"}
+          ariaLabel={locale === "ar" ? a11y("switchToEnglish") : a11y("switchToArabic")}
         />
-      </div>
-    </div>
+      }
+    />
   );
 }

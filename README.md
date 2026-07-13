@@ -1,69 +1,195 @@
-# Sifr Mind - Premium Dashboard & Landing Page
+# Sifr Mind
 
-A high-performance, aesthetically stunning web application built with **Next.js 16**, featuring an Apple-inspired landing page and a robust multilingual dashboard infrastructure.
+A premium brand presence platform with an Apple-inspired landing page, bilingual Arabic/English support, and legal documentation infrastructure.
 
-## 🚀 Key Features
+## Features
 
-- **Apple-Inspired Design**: Minimalist aesthetics with fluid animations and premium typography.
-- **Interactive Background**: A physics-based, mouse-reactive grid of '0's powered by Canvas API.
-- **Full Internationalization (i18n)**: Native support for Arabic (RTL) and English (LTR) using `next-intl`.
-- **Modern Tech Stack**: Built with Tailwind CSS 4, DaisyUI 5, and Framer Motion.
-- **Theme System**: Intelligent dark/light mode integration.
-- **Glassmorphism**: Sophisticated UI components with backdrop blurs and subtle borders.
+- Interactive Canvas particle background with mouse-reactive physics
+- Bilingual support: Arabic (RTL) and English (LTR) via `next-intl`
+- Monochrome dark theme with glassmorphism UI components
+- Full-page sections: Hero, Products, Principles, Features, Process, FAQ, CTA
+- Contact page with email, WhatsApp, Instagram, Facebook cards
+- Legal pages (Terms of Service, Privacy Policy) with sticky TOC and reading progress
+- Scroll-triggered reveal animations with reduced-motion support
+- Responsive design with mobile slide-out navigation
+- SEO: Open Graph, Twitter cards, JSON-LD breadcrumbs, sitemap-ready
 
-## 🛠 Tech Stack
+## Tech Stack
 
-- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
-- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/), [DaisyUI 5](https://daisyui.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **i18n**: [next-intl](https://next-intl-docs.vercel.app/)
-- **UI Components**: [HeroUI](https://heroui.com/) & Radix UI
-- **Icons**: [React Icons](https://react-icons.github.io/react-icons/) & Lucide React
+| Layer | Technology |
+|-------|-----------|
+| Framework | Next.js 16 (App Router, Turbopack) |
+| Language | TypeScript 5 (strict mode) |
+| Styling | Tailwind CSS 4, CSS custom properties |
+| Animation | Framer Motion 12 |
+| i18n | next-intl 4 |
+| Icons | lucide-react |
+| Linting | ESLint 9 + eslint-config-next |
 
-## 📦 Getting Started
+## Folder Structure
 
-### Prerequisites
+```
+src/
+├── app/
+│   ├── [locale]/           # Internationalized routes
+│   │   ├── page.tsx        # Landing page (server)
+│   │   ├── HomeClient.tsx  # Landing page (client)
+│   │   ├── contact/        # Contact page
+│   │   ├── terms-of-service/
+│   │   ├── privacy-policy/
+│   │   └── layout.tsx      # Locale-aware layout
+│   ├── providers.tsx       # Client providers wrapper
+│   ├── layout.tsx          # Root layout
+│   └── globals.css         # Design tokens and base styles
+├── components/
+│   ├── ui/                 # Primitives: Button, Badge, Container, etc.
+│   ├── sections/           # Landing page sections
+│   ├── legal/              # Legal page components
+│   ├── icons/              # Custom SVG icon set
+│   ├── Navbar.tsx          # Server navbar
+│   ├── NavbarClient.tsx    # Interactive navbar
+│   ├── NavbarActions.tsx   # Language switcher
+│   ├── Footer.tsx
+│   ├── Logo.tsx
+│   └── InteractiveSifrBackground.tsx
+├── config/
+│   └── legal.ts            # Legal config constants
+├── data/
+│   └── legal/              # Section definitions
+├── i18n/
+│   └── request.ts          # next-intl request config
+├── lib/
+│   ├── utils.ts            # cn() helper (clsx + tailwind-merge)
+│   └── i18n.ts             # Cached getT() helper
+├── types/
+│   └── legal.ts            # Legal page TypeScript interfaces
+├── navigation.ts           # next-intl navigation utilities
+├── proxy.ts                # i18n middleware (locale routing)
+└── routing.ts              # Locale configuration
+messages/
+├── ar.json                 # Arabic translations
+└── en.json                 # English translations
+public/
+├── favicon.svg
+├── fullSizeIcon.png
+├── icon.png
+└── icon.svg
+```
 
-- Node.js 20+ 
-- npm or yarn
+## Installation
 
-### Installation
+```bash
+git clone https://github.com/your-org/sifrmind.git
+cd sifrmind
+npm install
+```
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-repo/sifrmind.git
-   cd sifrmind
-   ```
+## Environment Variables
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+Copy `.env.example` to `.env`:
 
-3. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
+```bash
+cp .env.example .env
+```
 
-4. **Open in browser:**
-   Navigate to `http://localhost:3000` to see the result.
+See `.env.example` for all documented variables. No variables are required for development.
 
-## 📁 Project Structure
+## Running Development
 
-- `src/app/[locale]`: Core routing and page layouts (i18n aware).
-- `src/components`: Reusable UI components (Navbar, AppleLanding, etc.).
-- `src/lib`: Utility functions and shared logic.
-- `messages/`: Localization JSON files for different languages.
-- `public/`: Static assets like icons and images.
+```bash
+npm run dev
+```
 
-## 🎨 Design Philosophy
+Open [http://localhost:3000](http://localhost:3000). The default locale is Arabic (`/ar`). Switch to English at `/en`.
 
-Sifr Mind prioritizes **Visual Excellence**. Every interaction is designed to feel "premium" through:
-- Curated color palettes.
-- Precise typography (Cairo & IBM Plex Sans Arabic).
-- Smooth micro-animations.
-- Dynamic layouts that react to user input.
+## Production Build
 
----
+```bash
+npm run build
+npm start
+```
 
-Built with ❤️ by 7assan Osama.
+## Scripts
+
+| Script | Purpose |
+|--------|---------|
+| `dev` | Start Turbopack development server |
+| `build` | Create production build |
+| `start` | Start production server |
+| `lint` | Run ESLint across all files |
+| `type-check` | Run TypeScript compiler check (`tsc --noEmit`) |
+
+## Architecture Overview
+
+### Rendering
+
+- Static pages are pre-rendered at build time where possible
+- Dynamic routes (`[locale]/*`) are server-rendered per request
+- Client components are clearly marked with `"use client"` directives
+
+### Internationalization
+
+- Locale detection via `next-intl` middleware (now `proxy.ts`)
+- Routes: `/ar/...` (Arabic RTL) and `/en/...` (English LTR)
+- Translations stored as flat JSON in `messages/`
+- Custom `getT()` helper caches translation lookups per locale+namespace
+
+### Styling System
+
+- Dark-only monochrome theme defined as CSS custom properties in `@theme`
+- Design tokens: 3 surface levels, 3 text levels, semantic colors, glass effects
+- Utility-first approach with Tailwind; custom `cn()` helper for class merging
+
+### Animation
+
+- Framer Motion for scroll reveals, hover effects, and page transitions
+- `useReducedMotion()` respected throughout — all animations degrade gracefully
+- ScrollReveal component provides configurable directional reveal animations
+
+## Internationalization
+
+- Locales: `en` (English), `ar` (Arabic)
+- Default: `ar`
+- RTL layout auto-detected from locale
+- Translation keys follow dot-notation namespacing
+- All user-facing text is translated — no hardcoded strings in components
+
+## Theme System
+
+The app uses a single dark theme with CSS custom properties scoped via `@theme`. All colors, shadows, radii, and easing curves are defined in `src/app/globals.css`. There is no light mode toggle.
+
+## API Overview
+
+This project is a frontend-only application with no backend API. Contact form data is not processed server-side — links go directly to email and WhatsApp.
+
+## Deployment
+
+Deploy to any Node.js 20+ hosting platform:
+
+- **Vercel** (recommended): `vercel --prod`
+- **Docker**: Build with `next build`, serve with `next start`
+- **Static export**: Not supported (dynamic routes + middleware)
+
+## Performance
+
+- Turbopack for fast development and production builds
+- Font optimization via `next/font` (Cairo + IBM Plex Sans Arabic)
+- Lazy-loaded framer-motion components
+- Canvas background pauses when out of viewport (IntersectionObserver)
+- Passive event listeners on scroll and mouse handlers
+
+## Security
+
+- No secrets, API keys, or credentials in the codebase
+- All external links use `rel="noopener noreferrer"`
+- Content Security Policy-ready (no inline styles beyond Tailwind)
+- Input sanitization: no user-generated content rendered
+- `dangerouslySetInnerHTML` used only for JSON-LD structured data
+
+## License
+
+MIT — see [LICENSE](LICENSE).
+
+## Author
+
+Built by [7assan Osama](https://github.com/7assanosama).

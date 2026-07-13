@@ -1,65 +1,618 @@
 {
   "metadata": {
-    "title": "SifrMind - Zero Noise. Clear Mind.",
-    "description": "At SifrMind, we turn complexity into clarity. We craft high-performance software solutions designed to help businesses scale faster, operate smarter, and think clearer — with zero noise."
+    "title": "Sifr Mind — Less Noise. More Clarity.",
+    "titleTemplate": "%s | Sifr Mind",
+    "description": "Thoughtful technology that removes complexity and gives you space to think."
+  },
+  "accessibility": {
+    "skipToContent": "Skip to content",
+    "mainNavigation": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchToArabic": "التبديل إلى العربية",
+    "switchToEnglish": "Switch to English"
   },
   "general": {
-    "appName": "SifrMind"
+    "appName": "Sifr Mind"
   },
   "navbar": {
     "title": "Mind",
-    "theme": {
-      "title": "Appearance",
-      "themes": [
-        { "key": "light", "title": "Light" },
-        { "key": "dark", "title": "Dark" },
-        { "key": "cupcake", "title": "Cupcake" },
-        { "key": "bumblebee", "title": "Bumblebee" },
-        { "key": "emerald", "title": "Emerald" },
-        { "key": "corporate", "title": "Corporate" },
-        { "key": "synthwave", "title": "Synthwave" },
-        { "key": "retro", "title": "Retro" },
-        { "key": "cyberpunk", "title": "Cyberpunk" },
-        { "key": "valentine", "title": "Valentine" },
-        { "key": "halloween", "title": "Halloween" },
-        { "key": "garden", "title": "Garden" },
-        { "key": "forest", "title": "Forest" },
-        { "key": "aqua", "title": "Aqua" },
-        { "key": "lofi", "title": "Lo-Fi" },
-        { "key": "pastel", "title": "Pastel" },
-        { "key": "fantasy", "title": "Fantasy" },
-        { "key": "wireframe", "title": "Wireframe" },
-        { "key": "black", "title": "Black" },
-        { "key": "luxury", "title": "Luxury" },
-        { "key": "dracula", "title": "Dracula" },
-        { "key": "cmyk", "title": "CMYK" },
-        { "key": "autumn", "title": "Autumn" },
-        { "key": "business", "title": "Business" },
-        { "key": "acid", "title": "Acid" },
-        { "key": "lemonade", "title": "Lemonade" },
-        { "key": "night", "title": "Night" },
-        { "key": "coffee", "title": "Coffee" },
-        { "key": "winter", "title": "Winter" },
-        { "key": "dim", "title": "Dim" },
-        { "key": "nord", "title": "Nord" },
-        { "key": "sunset", "title": "Sunset" },
-        { "key": "caramellatte", "title": "Caramel Latte" },
-        { "key": "abyss", "title": "Abyss" },
-        { "key": "silk", "title": "Silk" }
-      ]
+    "links": ["Philosophy", "Products", "Process", "Contact Us"],
+    "cta": "Get Started",
+    "language": "Language"
+  },
+  "hero": {
+    "headline1": "Think Less.",
+    "headline2": "Achieve More.",
+    "supporting": "Technology that works quietly in the background.",
+    "description": "We build thoughtful products that remove complexity, automate repetitive work, and give you space to focus on what matters.",
+    "cta1": "Explore Dash",
+    "cta2": "Contact Us"
+  },
+  "whySifr": {
+    "subtitle": "Philosophy",
+    "headline": "Why Sifr Mind?",
+    "heroQuote": {
+      "line1": "Everything starts from zero...",
+      "line2": "But nothing moves forward without a mind to lead it."
     },
-    "language": "Language",
-    "account": {
-      "title": "My Account",
-      "menuItems": [
-        { "title": "Sign In", "url": "/login?sign=in" },
-        { "title": "Get Started", "url": "/login?sign=up" }
-      ]
+    "story": [
+      "Sifr Mind is not just a name. It is a way of thinking. We believe the greatest ideas emerge when the mind is clear.",
+      "In a world overwhelmed by information, notifications, endless tools, and constant distractions, technology shouldn't add more complexity — it should remove it.",
+      "That's why we build technology that works quietly in the background. It reduces mental load, filters out the noise, simplifies complexity, and gives people the freedom to think, create, and make better decisions. We believe artificial intelligence shouldn't replace human thinking — it should protect it."
+    ],
+    "principle": "The best technology is the one you barely notice.",
+    "pillars": [
+      {
+        "title": "Clarity",
+        "description": "Remove the noise so better thinking can happen."
+      },
+      {
+        "title": "Simplicity",
+        "description": "Technology should eliminate unnecessary complexity, not create it."
+      },
+      {
+        "title": "Focus",
+        "description": "Make room for what truly matters."
+      }
+    ],
+    "closing": "We started from zero... to build technology that gives you space to think, not another reason to be distracted."
+  },
+  "products": {
+    "subtitle": "Where It Begins",
+    "headline": "Starting with one product. Building an intelligent ecosystem.",
+    "description": "We start by solving one real problem exceptionally well, then expand into intelligent tools that work together to simplify how businesses operate.",
+    "timeline": {
+      "today": "Today",
+      "future": "The Future"
+    },
+    "dash": {
+      "name": "Dash",
+      "description": "Our modern platform for restaurants, cafés, and stores — bringing digital menus, QR ordering, branch management, and business tools into one seamless experience.",
+      "status": "Available Now",
+      "features": [
+        "Digital Menu",
+        "QR Experience",
+        "Orders",
+        "Branch Management",
+        "Dashboard"
+      ],
+      "cta": "Learn More →"
+    },
+    "ecosystem": {
+      "name": "The Future We're Building",
+      "description": "Dash is only the first step. We're building an intelligent ecosystem where every tool works together to reduce complexity, automate repetitive work, and help businesses focus on what truly matters.",
+      "status": "Coming Soon",
+      "features": [
+        "AI Assistants",
+        "Smart Automation",
+        "CRM",
+        "Analytics",
+        "Business Tools"
+      ],
+      "cta": "Explore Our Vision →"
+    },
+    "philosophy": {
+      "subtitle": "Our Philosophy",
+      "quote": "Every product begins with one question: How can technology reduce mental effort instead of adding more to it?",
+      "supporting": "That's the philosophy behind every Zero Mind product."
     }
   },
-  "Home": {
-    "heroText1": "The Future of Technology in Egypt",
-    "heroText2": "Starts Here.",
-    "soon": "Coming Soon"
+  "principles": {
+    "subtitle": "Our Principles",
+    "headline": "Every decision begins with a principle.",
+    "statement": "Every product, interaction, and design decision follows the same set of principles—keeping our technology focused, calm, and genuinely useful.",
+    "items": [
+      {
+        "title": "Reduce Complexity",
+        "description": "Simplify before adding. Technology should remove unnecessary steps, not create new ones."
+      },
+      {
+        "title": "Think Clearly",
+        "description": "Every interface should feel calm, focused, and effortless."
+      },
+      {
+        "title": "Intelligence With Purpose",
+        "description": "AI exists to assist people, never distract them."
+      },
+      {
+        "title": "Quiet Automation",
+        "description": "The best automation is the one you barely notice."
+      },
+      {
+        "title": "Built To Last",
+        "description": "We prefer timeless solutions over short-term trends."
+      },
+      {
+        "title": "Human First",
+        "description": "Technology should adapt to people—not the other way around."
+      }
+    ],
+    "closing": "These aren't just principles. They're the foundation behind every Zero Mind product."
+  },
+  "features": {
+    "subtitle": "Capabilities",
+    "headline": "Designed to remove friction from everyday work.",
+    "description": "Every capability exists for one reason: helping people spend less time managing systems and more time moving their business forward.",
+    "items": [
+      {
+        "title": "Automation",
+        "description": "Automate repetitive work so your team can focus on meaningful decisions."
+      },
+      {
+        "title": "AI Assistance",
+        "description": "Practical intelligence that supports people instead of distracting them."
+      },
+      {
+        "title": "Analytics",
+        "description": "Clear insights that help you understand your business with confidence."
+      },
+      {
+        "title": "Integrations",
+        "description": "Connect your tools into one seamless workflow."
+      },
+      {
+        "title": "Performance",
+        "description": "Fast, reliable experiences built for everyday operations."
+      },
+      {
+        "title": "Security",
+        "description": "Enterprise-grade protection designed into every layer."
+      }
+    ],
+    "closing": "Capabilities evolve. Our commitment to simplicity stays the same."
+  },
+  "process": {
+    "subtitle": "The Journey",
+    "headline": "From complexity to clarity.",
+    "description": "Every Zero Mind product follows the same journey\u2014understanding how people work before designing technology that quietly improves it.",
+    "steps": [
+      {
+        "id": "observe",
+        "title": "Observe",
+        "description": "We begin by understanding how real work happens."
+      },
+      {
+        "id": "simplify",
+        "title": "Simplify",
+        "description": "We remove unnecessary steps before adding new technology."
+      },
+      {
+        "id": "automate",
+        "title": "Automate",
+        "description": "Repetitive work moves into the background."
+      },
+      {
+        "id": "grow",
+        "title": "Grow",
+        "description": "People spend more time thinking, creating, and making better decisions."
+      }
+    ],
+    "closing": "Technology should quietly disappear into the work\u2014not become the work itself."
+  },
+  "faq": {
+    "subtitle": "FAQ",
+    "headline": "Questions Worth Asking",
+    "description": "Behind every product is a philosophy, and behind every philosophy are questions worth answering. Here are the ones we hear most often.",
+    "items": [
+      {
+        "question": "What is Sifr Mind?",
+
+        "answer": "Sifr Mind is a technology company that builds products designed to remove unnecessary complexity. Instead of adding more tools, dashboards, and notifications, we create technology that works quietly in the background so you can focus on what truly matters."
+      },
+
+      {
+        "question": "Why the name \"Sifr\"?",
+
+        "answer": "Sifr means 'zero' in Arabic. To us, zero is not emptiness—it's a beginning. We believe the best ideas emerge when the mind is clear and free from noise. Simplicity isn't just a design principle; it's a way of thinking."
+      },
+
+      {
+        "question": "What is the Sifr Mind philosophy?",
+
+        "answer": "Everything we build starts with one question: What can we remove? Before adding features, we look for ways to eliminate friction. We believe great technology reduces steps, lowers mental effort, and creates space for better thinking and better decisions."
+      },
+
+      {
+        "question": "What problem are you trying to solve?",
+
+        "answer": "Modern software has become unnecessarily noisy. Endless notifications, crowded dashboards, and features people rarely use create more distraction than value. Our mission is to build products that ask less from you and give you more clarity."
+      },
+
+      {
+        "question": "How is Sifr Mind different from other software companies?",
+
+        "answer": "Many companies measure success by how much time you spend using their products. We measure success by how little you have to think about ours. When our products quietly do their job and get out of your way, we've succeeded."
+      },
+
+      {
+        "question": "What do you build?",
+
+        "answer": "We build products that help people and businesses work with greater clarity and less complexity. Our first product is Dash, and it will be followed by more products built around the same principle: solve a real problem, then disappear into the background."
+      },
+
+      {
+        "question": "What is Dash?",
+
+        "answer": "Dash is an intelligent platform that helps restaurants, cafés, and stores build a modern digital presence while simplifying daily operations. It brings essential tools into one place, automates repetitive work with AI, and surfaces only what deserves your attention."
+      },
+
+      {
+        "question": "Why don't you build everything?",
+
+        "answer": "We don't believe more products automatically create more value. We build only when we can remove meaningful complexity and deliver a significantly better experience. Choosing what not to build is just as important as choosing what to build."
+      },
+
+      {
+        "question": "What's next for Sifr Mind?",
+
+        "answer": "Our vision extends far beyond a single product. We're building an ecosystem of technology that makes work simpler, quieter, and more intentional. Dash is only the beginning."
+      },
+
+      {
+        "question": "How do you use AI?",
+
+        "answer": "We use AI with purpose—not because it's trendy, but because it solves real problems. We use it to automate repetitive tasks, uncover meaningful patterns, and reduce the distance between a question and its answer. The best AI is the kind you barely notice."
+      },
+
+      {
+        "question": "What role should AI play?",
+
+        "answer": "AI should enhance human judgment, not replace it. Its role is to take care of repetitive work so people can focus on creativity, context, empathy, and the decisions that truly require human thinking."
+      },
+
+      {
+        "question": "How does AI reduce complexity?",
+
+        "answer": "Complexity often comes from too many choices, too much data, and too little context. AI helps by filtering noise, prioritizing information, and presenting only what matters—making decisions faster, simpler, and more confident."
+      },
+
+      {
+        "question": "Is my data secure?",
+
+        "answer": "Yes. Security and privacy are built into everything we create, not added later. We follow modern best practices for encryption, access control, and data protection. We never sell or exploit user data. Trust is our foundation."
+      },
+
+      {
+        "question": "Can I be part of the journey?",
+
+        "answer": "Absolutely. Whether you want to use our products, collaborate with us, or simply follow what we're building, we'd love to hear from you. Every conversation helps shape what comes next. Contact us at support@sifrmind.com."
+      },
+
+      {
+        "question": "What does Sifr Mind believe?",
+
+        "answer": "We believe technology shouldn't demand more of your attention—it should give it back to you. Every product we build is designed to reduce noise, simplify complexity, and create more space for the work that truly matters."
+      }
+    ],
+    "closing": "Curiosity leads to better ideas. If your question isn\u2019t here, we would be happy to continue the conversation."
+  },
+  "cta": {
+    "brand": {
+      "name": "ZERO MIND",
+      "tagline": "Beyond the noise"
+    },
+    "headlinePart1": "Start from Zero...",
+    "headlinePart2": "and build what deserves to move forward.",
+    "subtext": "We build tools that reduce noise, remove complexity, and give individuals and companies more space to focus on what truly makes an impact.",
+    "cta1": "Get Started",
+    "cta2": "Talk to Us"
+  },
+  "contact": {
+    "metadata": {
+      "title": "Contact Sifr Mind",
+      "description": "Get in touch with Sifr Mind. We'd love to hear your questions, ideas, feedback, or partnership inquiries."
+    },
+    "hero": {
+      "label": "CONTACT",
+      "headline": "Let's Build Something Better.",
+      "description": "Whether you have a question, feedback, partnership idea, or simply want to say hello, we'd love to hear from you."
+    },
+    "cards": {
+      "email": {
+        "title": "Email Support",
+        "description": "Need help, have feedback, or simply want to say hello? We're always happy to hear from you.",
+        "value": "support@sifrmind.com",
+        "cta": "Send Email",
+        "href": "mailto:support@sifrmind.com"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "description": "Want a faster conversation? Send us a message anytime.",
+        "value": "+20 102 923 1051",
+        "cta": "Open WhatsApp",
+        "href": "https://wa.me/201029231051"
+      },
+      "instagram": {
+        "title": "Instagram",
+        "description": "Follow our journey and discover what we're building.",
+        "value": "@sifrmind",
+        "cta": "Visit Instagram",
+        "href": "https://www.instagram.com/sifrmind"
+      },
+      "facebook": {
+        "title": "Facebook",
+        "description": "Join our community and stay connected.",
+        "cta": "Visit Facebook",
+        "href": "https://www.facebook.com/share/1RuwZFnEF1"
+      }
+    },
+    "quickInfo": {
+      "responseTime": {
+        "title": "Response Time",
+        "description": "Usually within 24 hours."
+      },
+      "availability": {
+        "title": "Availability",
+        "description": "Whether morning or evening, you can reach us anytime."
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "description": "Have an idea or partnership? We're always open to meaningful collaborations."
+      }
+    },
+    "bottomCta": {
+      "headline": "Let's build something meaningful together.",
+      "description": "Choose the communication channel that's most comfortable for you.",
+      "primaryCta": "Send Email",
+      "secondaryCta": "Chat on WhatsApp"
+    }
+  },
+  "privacyPolicy": {
+    "metadata": {
+      "title": "Privacy Policy | Sifr Mind",
+      "description": "Your trust matters. This policy explains what information we collect, how we use it, and how we protect your privacy."
+    },
+    "hero": {
+      "title": "Privacy Policy",
+      "subtitle": "Your trust matters. This policy explains what information we collect, how we use it, and how we protect your privacy."
+    },
+    "navigation": {
+      "introduction": "Introduction",
+      "informationWeCollect": "Information We Collect",
+      "howWeUseInformation": "How We Use Information",
+      "aiFeatures": "AI Features",
+      "fileStorage": "File Storage",
+      "cookies": "Cookies",
+      "thirdPartyServices": "Third-Party Services",
+      "security": "Security",
+      "yourRights": "Your Rights",
+      "childrensPrivacy": "Children's Privacy",
+      "changesToThisPolicy": "Changes to This Policy",
+      "contact": "Contact"
+    },
+    "introduction": {
+      "heading": "Introduction",
+      "body": "At Sifr Mind, we take your privacy seriously. This Privacy Policy explains what information we collect, how we use it, and the choices you have. It applies to everyone who visits our website, uses our products, or interacts with our services."
+    },
+    "informationWeCollect": {
+      "heading": "Information We Collect",
+      "body": "We collect only the information necessary to provide and improve our services. Depending on how you use Sifr Mind, the information we collect may include:",
+      "items": [
+        "Account information such as your name, email address, and account credentials",
+        "Contact information including email addresses and phone numbers you provide",
+        "Content you upload, submit, or process through our services",
+        "Usage data about how you interact with our platform, features used, and pages visited",
+        "Device information such as browser type, operating system, and IP address",
+        "Cookies and similar tracking technologies to enhance your experience",
+        "Payment information, which is processed securely by third-party payment providers"
+      ]
+    },
+    "howWeUseInformation": {
+      "heading": "How We Use Information",
+      "body": "We use the information we collect to operate, improve, and protect our services:",
+      "items": [
+        "Provide, maintain, and deliver our products and features",
+        "Improve and develop new products, features, and functionality",
+        "Provide customer support and respond to your inquiries",
+        "Protect the security and integrity of our platform and user data",
+        "Detect, prevent, and address fraud, abuse, or security incidents",
+        "Analyze usage patterns to improve performance and user experience",
+        "Comply with legal obligations and enforce our terms"
+      ]
+    },
+    "aiFeatures": {
+      "heading": "AI Features",
+      "body": "Some of our services use artificial intelligence to process user requests and deliver functionality. When AI processes your data, it does so only to provide the specific feature you requested. We do not train our AI models on your personal data, uploaded content, or usage history without your explicit consent. AI-generated outputs are provided as assistive suggestions and should be reviewed before use. They do not constitute professional advice."
+    },
+    "fileStorage": {
+      "heading": "File Storage",
+      "body": "You retain full ownership of any content you upload to our services. We only access your content to provide the functionality you request. We implement secure storage with encryption at rest and in transit. Regular backups are performed to prevent data loss, and deleted content is removed from active systems promptly. We retain data only as long as necessary to provide our services or as required by law. Upon account deletion, your content is permanently deleted from our systems within a reasonable timeframe."
+    },
+    "cookies": {
+      "heading": "Cookies",
+      "body": "We use cookies and similar technologies to improve your experience, secure your account, and understand how our services are used. The types of cookies we use include:",
+      "items": [
+        "Authentication cookies to keep you signed in and secure",
+        "Preference cookies to remember your settings and customization",
+        "Analytics cookies to understand how you interact with our platform",
+        "Performance cookies to monitor and improve service reliability"
+      ],
+      "card": {
+        "type": "notice",
+        "body": "You can control cookie preferences through your browser settings. Disabling certain cookies may affect the functionality of some features."
+      }
+    },
+    "thirdPartyServices": {
+      "heading": "Third-Party Services",
+      "body": "We partner with trusted third-party service providers to deliver our products. These partners are carefully selected and contractually bound to protect your data. Key categories include:",
+      "items": [
+        "Content delivery and security infrastructure such as Cloudflare",
+        "Authentication providers including Google Authentication",
+        "Secure payment processing by industry-standard payment providers",
+        "Analytics services that help us understand and improve our platform"
+      ],
+      "card": {
+        "type": "notice",
+        "body": "Each third-party provider operates under its own privacy policy. We encourage you to review their policies for a complete understanding of how they handle data."
+      }
+    },
+    "security": {
+      "heading": "Security",
+      "body": "We protect your data through modern security practices designed into every layer of our infrastructure:",
+      "items": [
+        "End-to-end encryption for data in transit using TLS/HTTPS",
+        "Encryption at rest for stored data",
+        "Secure infrastructure with regular security audits",
+        "Strict access controls and authentication requirements",
+        "Continuous monitoring for potential vulnerabilities"
+      ]
+    },
+    "yourRights": {
+      "heading": "Your Rights",
+      "body": "Depending on your location, you may have the following rights regarding your personal data:",
+      "items": [
+        "Access the personal data we hold about you",
+        "Update or correct inaccurate information",
+        "Delete your account and associated data",
+        "Request a portable copy of your data",
+        "Withdraw consent where processing is based on consent",
+        "Contact us with questions or concerns about your privacy"
+      ]
+    },
+    "childrensPrivacy": {
+      "heading": "Children's Privacy",
+      "body": "Our services are not directed to individuals under the age of 13 (or 16 in certain regions). We do not knowingly collect personal information from children. If we learn that we have collected data from a child without appropriate consent, we will delete it promptly. If you believe a child has provided us with personal data, please contact us immediately."
+    },
+    "changesToThisPolicy": {
+      "heading": "Changes to This Policy",
+      "body": "We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or industry standards. When we make material changes, we will notify you through our website or via email. Your continued use of our services after the effective date constitutes acceptance of the updated policy."
+    },
+    "contact": {
+      "heading": "Contact",
+      "body": "If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, we're here to help. Reach out to our team anytime."
+    },
+    "bottomCta": {
+      "headline": "Questions? We're here to help.",
+      "description": "Reach our team anytime. We typically respond within 24 hours.",
+      "primaryCta": "Send Email",
+      "secondaryCta": "Chat on WhatsApp"
+    }
+  },
+  "termsOfService": {
+    "metadata": {
+      "title": "Terms of Service | Sifr Mind",
+      "description": "These Terms govern your use of Sifr Mind products and services. Please read them carefully."
+    },
+    "hero": {
+      "title": "Terms of Service",
+      "subtitle": "These Terms govern your use of Sifr Mind products and services. Please read them carefully before using our platform."
+    },
+    "navigation": {
+      "acceptanceOfTerms": "Acceptance of Terms",
+      "eligibility": "Eligibility",
+      "accounts": "Accounts",
+      "acceptableUse": "Acceptable Use",
+      "userContent": "User Content",
+      "intellectualProperty": "Intellectual Property",
+      "aiDisclaimer": "AI Disclaimer",
+      "availability": "Availability",
+      "payments": "Payments",
+      "termination": "Termination",
+      "limitationOfLiability": "Limitation of Liability",
+      "governingLaw": "Governing Law",
+      "contact": "Contact"
+    },
+    "acceptanceOfTerms": {
+      "heading": "Acceptance of Terms",
+      "body": "By accessing or using any Sifr Mind product, service, or website, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, you may not access or use our services. We may update these terms from time to time, and continued use after changes constitutes acceptance."
+    },
+    "eligibility": {
+      "heading": "Eligibility",
+      "body": "You must be at least 13 years of age (or 16 in certain jurisdictions) to use our services. If you are accepting these terms on behalf of a legal entity, you represent that you have the authority to bind that entity. Our services are not available where prohibited by law."
+    },
+    "accounts": {
+      "heading": "Accounts",
+      "body": "You are responsible for maintaining the security of your account credentials and for all activity that occurs under your account. You agree to:",
+      "items": [
+        "Provide accurate and complete account information",
+        "Keep your password secure and confidential",
+        "Notify us immediately of any unauthorized access or security breach",
+        "Accept responsibility for all actions taken through your account"
+      ]
+    },
+    "acceptableUse": {
+      "heading": "Acceptable Use",
+      "body": "You agree to use our services responsibly and in compliance with all applicable laws. The following activities are strictly prohibited:",
+      "items": [
+        "Uploading or distributing malware, viruses, or harmful code",
+        "Abusing or attempting to manipulate AI systems and features",
+        "Launching attacks on our infrastructure, including DDoS or penetration attempts",
+        "Violating any applicable local, national, or international law",
+        "Impersonating any person or entity or providing false information",
+        "Distributing harmful, illegal, or malicious content through our platform"
+      ]
+    },
+    "userContent": {
+      "heading": "User Content",
+      "body": "You retain full ownership of any content you upload, submit, or create using our services. By submitting content, you grant Sifr Mind a limited, non-exclusive license to use, store, and process that content solely for the purpose of providing and improving our services. We do not claim ownership of your content, and we will not use it for purposes unrelated to your use of our platform."
+    },
+    "intellectualProperty": {
+      "heading": "Intellectual Property",
+      "body": "All intellectual property rights in our software, design, brand, logo, content, and technology remain the exclusive property of Sifr Mind. This includes patents, trademarks, copyrights, trade secrets, and any other proprietary rights. You may not reproduce, modify, distribute, or create derivative works based on our intellectual property without our explicit written consent."
+    },
+    "aiDisclaimer": {
+      "heading": "AI Disclaimer",
+      "body": "Our services may include AI-generated content and suggestions. While we strive for accuracy, AI outputs may contain errors, omissions, or inaccuracies. You are responsible for reviewing and verifying AI-generated outputs before relying on them. AI responses do not constitute legal, medical, financial, or professional advice. Always consult qualified professionals for advice in these areas."
+    },
+    "availability": {
+      "heading": "Availability",
+      "body": "We strive to provide reliable and uninterrupted access to our services, but we do not guarantee 100% availability. Our services may occasionally be unavailable due to maintenance, updates, or circumstances beyond our control. We will make reasonable efforts to notify you in advance of scheduled maintenance."
+    },
+    "payments": {
+      "heading": "Payments",
+      "body": "Some of our services may be offered on a subscription basis. Payment terms, including billing cycles, renewal policies, and cancellation procedures, will be clearly communicated at the time of purchase and in your account settings. We use secure third-party payment processors and do not store full payment card details on our systems."
+    },
+    "termination": {
+      "heading": "Termination",
+      "body": "We reserve the right to suspend or terminate access to our services, without prior notice, if we determine that you have violated these Terms of Service. Upon termination, your right to use the services will immediately cease. You may also terminate your account at any time by contacting us. Provisions regarding ownership, liability, and governing law will survive termination."
+    },
+    "limitationOfLiability": {
+      "heading": "Limitation of Liability",
+      "body": "To the fullest extent permitted by law, Sifr Mind shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services. Our total liability for any claim arising from these terms or your use of our services is limited to the amount you have paid us in the twelve months preceding the claim."
+    },
+    "governingLaw": {
+      "heading": "Governing Law",
+      "body": "These Terms of Service shall be governed by and construed in accordance with the laws of the Arab Republic of Egypt. Any disputes arising under these terms shall be subject to the exclusive jurisdiction of the courts of Egypt."
+    },
+    "contact": {
+      "heading": "Contact",
+      "body": "If you have questions about these Terms of Service or would like to report a violation, please reach out to our team."
+    },
+    "bottomCta": {
+      "headline": "Have questions about our terms?",
+      "description": "We're here to help. Reach out to our team anytime.",
+      "primaryCta": "Send Email",
+      "secondaryCta": "Chat on WhatsApp"
+    }
+  },
+  "footer": {
+    "brand": {
+      "first": "Sifr",
+      "second": "Mind"
+    },
+    "statement": "Everything starts from zero.",
+    "description": "Tools that give you space to think.",
+    "connect": "Connect",
+    "product": {
+      "title": "Product",
+      "links": [{ "label": "Dash", "href": "#products" }]
+    },
+    "company": {
+      "title": "Company",
+      "links": [
+        { "label": "Philosophy", "href": "#why-sifr" },
+        { "label": "Contact", "href": "/contact" }
+      ]
+    },
+    "legal": {
+      "title": "Legal",
+      "links": [
+        { "label": "Privacy Policy", "href": "/privacy-policy" },
+        { "label": "Terms of Service", "href": "/terms-of-service" }
+      ]
+    },
+    "copyright": "© 2026 Sifr Mind. All rights reserved.",
+    "signature": "Made with clarity."
   }
 }
